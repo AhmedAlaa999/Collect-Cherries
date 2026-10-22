@@ -10,8 +10,8 @@ Jump between platforms, explore the vertical level, and collect coins as you cli
 
 ## How to Play
 
-- Move left and right to navigate the level.
-- Press **Space** or **Enter** to jump.
+- Move left and right arrows to navigate the level.
+- Press **Space** to jump.
 - Jump between platforms to keep climbing.
 - Collect all **10 coins** to win.
 - Avoid falling behind the camera, or the **You Died** screen will appear.
