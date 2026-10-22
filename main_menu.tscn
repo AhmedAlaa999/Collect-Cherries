@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://vc0e7rgh2rtk"]
+
+[ext_resource type="Texture2D" uid="uid://cdxtd3yuer80" path="res://HI/1.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dkywygxmvuais" path="res://main_menu.gd" id="1_jix8l"]
+[ext_resource type="FontFile" path="res://HI/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata" id="2_7vrkn"]
+[ext_resource type="AudioStream" uid="uid://vqdrbndc1qvd" path="res://Between The Dunes.mp3" id="3_fu7sn"]
+
+[node name="MainMenu" type="Control" unique_id=1529275845]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_jix8l")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=186858351]
+position = Vector2(577.5, 323.5)
+scale = Vector2(2.0017362, 1.9783951)
+texture = ExtResource("1_06t4h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1819925859]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 407.0
+offset_top = 323.0
+offset_right = 725.0
+offset_bottom = 547.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=105426647]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7vrkn")
+text = "BERRY-CHERRIES"
+
+[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=1899111517]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+text = "PLAY"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=341070439]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7vrkn")
+text = "QUIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1221758769]
+stream = ExtResource("3_fu7sn")
+autoplay = true

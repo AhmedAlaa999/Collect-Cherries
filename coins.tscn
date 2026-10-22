@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://cjcwdw65xvk2k"]
+
+[ext_resource type="Script" uid="uid://d37f0veetl8kc" path="res://coins.gd" id="1_665jj"]
+[ext_resource type="Texture2D" uid="uid://besae58m8jbtq" path="res://Coin_tiles.png" id="1_tsooq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_665jj"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88f8t"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhvp1"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kywx8"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl8c7"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_241p1"]
+atlas = ExtResource("1_tsooq")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dv7cx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_665jj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88f8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhvp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kywx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl8c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_241p1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ns3a"]
+radius = 8.0
+
+[node name="Coins" type="Area2D" unique_id=77996226]
+script = ExtResource("1_665jj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=421135178]
+sprite_frames = SubResource("SpriteFrames_dv7cx")
+autoplay = "default"
+frame_progress = 0.15222506
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=57354608]
+shape = SubResource("CircleShape2D_1ns3a")
