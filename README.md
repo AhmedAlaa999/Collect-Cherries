@@ -10,7 +10,7 @@ Jump between platforms, explore the vertical level, and collect coins as you cli
 
 ## How to Play
 
-- Move left and right arrows to navigate the level.
+- click left and right arrows to navigate the level.
 - Press **Space** to jump.
 - Jump between platforms to keep climbing.
 - Collect all **10 coins** to win.
