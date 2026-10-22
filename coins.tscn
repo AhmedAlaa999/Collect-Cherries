@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d37f0veetl8kc" path="res://coins.gd" id="1_665jj"]
 [ext_resource type="Texture2D" uid="uid://besae58m8jbtq" path="res://Coin_tiles.png" id="1_tsooq"]
+[ext_resource type="AudioStream" uid="uid://b0d7dpmn8r6qg" path="res://chieuk-coin-257878 (1).mp3" id="3_88f8t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_665jj"]
 atlas = ExtResource("1_tsooq")
@@ -56,6 +57,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_1ns3a"]
 radius = 8.0
 
+[sub_resource type="Gradient" id="Gradient_88f8t"]
+offsets = PackedFloat32Array(0, 0.89759034)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_he13q"]
+gradient = SubResource("Gradient_88f8t")
+fill = 1
+fill_from = Vector2(0.5043478, 0.4826087)
+fill_to = Vector2(0.84782606, 0.1826087)
+
 [node name="Coins" type="Area2D" unique_id=77996226]
 script = ExtResource("1_665jj")
 
@@ -66,3 +77,10 @@ frame_progress = 0.15222506
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=57354608]
 shape = SubResource("CircleShape2D_1ns3a")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1287391645]
+stream = ExtResource("3_88f8t")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=562224839]
+position = Vector2(0, 1)
+texture = SubResource("GradientTexture2D_he13q")

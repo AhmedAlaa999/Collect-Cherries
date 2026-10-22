@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0d7dpmn8r6qg"
+path="res://.godot/imported/chieuk-coin-257878 (1).mp3-eee7b68287a5a3949816601d9a4f5725.mp3str"
+
+[deps]
+
+source_file="res://chieuk-coin-257878 (1).mp3"
+dest_files=["res://.godot/imported/chieuk-coin-257878 (1).mp3-eee7b68287a5a3949816601d9a4f5725.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

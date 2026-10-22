@@ -1,0 +1,55 @@
+[gd_scene format=4 uid="uid://cxfvogtsiedgw"]
+
+[ext_resource type="Texture2D" uid="uid://cdxtd3yuer80" path="res://HI/1.png" id="1_5hk42"]
+[ext_resource type="Texture2D" uid="uid://bcajan14f7ce" path="res://HI/tile.png" id="1_dyl4d"]
+[ext_resource type="PackedScene" uid="uid://bout52xvl40ti" path="res://death_screen.tscn" id="1_v4mvp"]
+[ext_resource type="PackedScene" uid="uid://50i7vp78f5v4" path="res://cherry_guy.tscn" id="2_km2bi"]
+[ext_resource type="Script" uid="uid://dfshwg1amtsdk" path="res://camera_2d.gd" id="4_1ns3a"]
+[ext_resource type="AudioStream" uid="uid://vqdrbndc1qvd" path="res://Between The Dunes.mp3" id="4_ob7o4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km2bi"]
+texture = ExtResource("1_dyl4d")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.4749136, 8, -6.4749136, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_dv7cx"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_km2bi")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5hk42"]
+texture = ExtResource("1_dyl4d")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_vax7b"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5hk42")
+
+[node name="MainMap" type="Node2D" unique_id=288375827]
+
+[node name="DeathScreen" parent="." unique_id=457182948 instance=ExtResource("1_v4mvp")]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1862794187]
+position = Vector2(289, -156.5)
+scale = Vector2(1.1076388, 1.095679)
+texture = ExtResource("1_5hk42")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=917345760]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAJAAAAAQAAAAAAAAAKAAAAAQAAAAAAAAALAAAAAQAAAAAAAAAMAAAAAQAAAAAAAAANAAAAAQAAAAAAAAAOAAAAAQAAAAAAAAAPAAAAAQAAAAAAAAAQAAAAAQAAAAAAAAARAAAAAQAAAAAAAAASAAAAAQAAAAAAAAATAAAAAQAAAAAAAAAUAAAAAQAAAAAAAAAVAAAAAQAAAAAAAAAWAAAAAQAAAAAAAAAXAAAAAQAAAAAAAAAYAAAAAQAAAAAAAAAZAAAAAQAAAAAAAAAaAAAAAQAAAAAAAAAbAAAAAQAAAAAAAAAcAAAAAQAAAAAAAAAdAAAAAQAAAAAAAAAeAAAAAQAAAAAAAAAfAAAAAQAAAAAAAAAgAAAAAQAAAAAAAAAhAAAAAQAAAAAAAAAiAAAAAQAAAAAAAAAjAAAAAQAAAAAAAAAkAAAAAQAAAAAAAAD//wAAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_dv7cx")
+
+[node name="CherryGuy" parent="." unique_id=1780845050 instance=ExtResource("2_km2bi")]
+position = Vector2(-7, -1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1872003413]
+offset = Vector2(292.06, -152.14)
+zoom = Vector2(1.92, 1.92)
+script = ExtResource("4_1ns3a")
+
+[node name="CantGetOutBRO" type="TileMapLayer" parent="." unique_id=414928193]
+tile_map_data = PackedByteArray("AAAlAOv/AAAAAAAAAAAlAOz/AAAAAAAAAAAlAO3/AAAAAAAAAAAlAO7/AAAAAAAAAAAlAO//AAAAAAAAAAAlAPD/AAAAAAAAAAAlAPH/AAAAAAAAAAAlAPL/AAAAAAAAAAAlAPP/AAAAAAAAAAAlAPT/AAAAAAAAAAAlAPX/AAAAAAAAAAAlAPb/AAAAAAAAAAAlAPf/AAAAAAAAAAAlAPj/AAAAAAAAAAAlAPn/AAAAAAAAAAAlAPr/AAAAAAAAAAAlAPv/AAAAAAAAAAAlAPz/AAAAAAAAAAAlAP3/AAAAAAAAAAAlAP7/AAAAAAAAAAAlAP//AAAAAAAAAAAlAAAAAAAAAAAAAAD+/+v/AAAAAAAAAAD+/+z/AAAAAAAAAAD+/+3/AAAAAAAAAAD+/+7/AAAAAAAAAAD+/+//AAAAAAAAAAD+//D/AAAAAAAAAAD+//H/AAAAAAAAAAD+//L/AAAAAAAAAAD+//P/AAAAAAAAAAD+//T/AAAAAAAAAAD+//X/AAAAAAAAAAD+//b/AAAAAAAAAAD+//f/AAAAAAAAAAD+//j/AAAAAAAAAAD+//n/AAAAAAAAAAD+//r/AAAAAAAAAAD+//v/AAAAAAAAAAD+//z/AAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_vax7b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1170889157]
+stream = ExtResource("4_ob7o4")
+autoplay = true

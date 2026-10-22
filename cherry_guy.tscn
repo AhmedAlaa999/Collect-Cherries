@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://qidp4uahh3xh" path="res://HI/character-run-1.png" id="9_72w43"]
 [ext_resource type="Texture2D" uid="uid://bj8m6h6e80s82" path="res://HI/character-run-2.png" id="10_tcsli"]
 [ext_resource type="Texture2D" uid="uid://b27t1ad4keqa2" path="res://HI/character-run-3.png" id="11_qqm43"]
+[ext_resource type="AudioStream" uid="uid://5qq6ic347nwu" path="res://wolfy_sanic-jump-15984.mp3" id="12_77m8a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_katty"]
 atlas = ExtResource("1_pukqv")
@@ -122,3 +123,7 @@ autoplay = "Ideal"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=488751097]
 position = Vector2(29, -9)
 shape = SubResource("CircleShape2D_pukqv")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=288442159]
+stream = ExtResource("12_77m8a")
+pitch_scale = 1.26
