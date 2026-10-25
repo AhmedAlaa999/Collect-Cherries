@@ -48,3 +48,13 @@ text = "QUIT"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1221758769]
 stream = ExtResource("3_fu7sn")
 autoplay = true
+
+[node name="Label" type="Label" parent="." unique_id=464649399]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 397.0
+offset_right = 637.0
+offset_bottom = 420.0
+theme_override_colors/font_color = Color(1, 0.40784314, 0, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+text = "Halloween Update"

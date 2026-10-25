@@ -11,7 +11,9 @@
 [ext_resource type="AudioStream" uid="uid://vqdrbndc1qvd" path="res://Between The Dunes.mp3" id="4_ob7o4"]
 [ext_resource type="PackedScene" uid="uid://cjcwdw65xvk2k" path="res://coins.tscn" id="5_1ns3a"]
 [ext_resource type="Texture2D" uid="uid://buk1tjvum0rb3" path="res://HI/platform/platform.png" id="7_qu338"]
+[ext_resource type="PackedScene" uid="uid://uxm6h0nhjl8t" path="res://Blood.tscn" id="8_i4yi8"]
 [ext_resource type="FontFile" path="res://HI/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata" id="10_286o7"]
+[ext_resource type="PackedScene" uid="uid://dn30ojdtaict6" path="res://Halo.tscn" id="13_dt6kx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km2bi"]
 texture = ExtResource("1_dyl4d")
@@ -67,12 +69,22 @@ position = Vector2(288, -864.00006)
 scale = Vector2(1.1076388, 1.095679)
 texture = ExtResource("1_5hk42")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=745885838]
+offset_left = -395.0
+offset_top = -1185.0
+offset_right = 886.0
+offset_bottom = 63.0
+color = Color(0.09803922, 0.09803922, 0.4392157, 0.4392157)
+
 [node name="Ground" type="TileMapLayer" parent="." unique_id=917345760]
 tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAJAAAAAQAAAAAAAAAKAAAAAQAAAAAAAAALAAAAAQAAAAAAAAAMAAAAAQAAAAAAAAANAAAAAQAAAAAAAAAOAAAAAQAAAAAAAAAPAAAAAQAAAAAAAAAQAAAAAQAAAAAAAAARAAAAAQAAAAAAAAASAAAAAQAAAAAAAAATAAAAAQAAAAAAAAAUAAAAAQAAAAAAAAAVAAAAAQAAAAAAAAAWAAAAAQAAAAAAAAAXAAAAAQAAAAAAAAAYAAAAAQAAAAAAAAAZAAAAAQAAAAAAAAAaAAAAAQAAAAAAAAAbAAAAAQAAAAAAAAAcAAAAAQAAAAAAAAAdAAAAAQAAAAAAAAAeAAAAAQAAAAAAAAAfAAAAAQAAAAAAAAAgAAAAAQAAAAAAAAAhAAAAAQAAAAAAAAAiAAAAAQAAAAAAAAAjAAAAAQAAAAAAAAAkAAAAAQAAAAAAAAD//wAAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_dv7cx")
 
 [node name="CherryGuy" parent="." unique_id=1780845050 instance=ExtResource("2_km2bi")]
 position = Vector2(-7, -1)
+
+[node name="CharacterBody2D6" parent="CherryGuy" unique_id=1743768713 instance=ExtResource("8_i4yi8")]
+position = Vector2(39, -20)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1872003413]
 offset = Vector2(292.06, -152.14)
@@ -131,3 +143,18 @@ offset_bottom = 27.0
 theme_override_fonts/font = ExtResource("10_286o7")
 theme_override_font_sizes/font_size = 20
 text = "Coins: 0/10"
+
+[node name="CharacterBody2D" parent="." unique_id=905250551 instance=ExtResource("13_dt6kx")]
+position = Vector2(402, -274)
+
+[node name="CharacterBody2D2" parent="." unique_id=1343876302 instance=ExtResource("13_dt6kx")]
+position = Vector2(257, -417)
+
+[node name="CharacterBody2D3" parent="." unique_id=546379585 instance=ExtResource("13_dt6kx")]
+position = Vector2(384, -610)
+
+[node name="CharacterBody2D4" parent="." unique_id=1301016791 instance=ExtResource("13_dt6kx")]
+position = Vector2(403, -850)
+
+[node name="CharacterBody2D5" parent="." unique_id=284653035 instance=ExtResource("13_dt6kx")]
+position = Vector2(77, -914)
