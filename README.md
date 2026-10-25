@@ -1,4 +1,4 @@
-# Collect Cherries
+# Collect Cherries - Halloween Update
 
 Collect Cherries is a fun and challenging 2D platformer where your goal is to collect **10 coins** while jumping between platforms. As the camera continuously scrolls upward, you must keep climbing, collect every coin, and avoid falling behind the screen.
 
@@ -42,7 +42,8 @@ Your mission is simple: collect all 10 coins while surviving the continuously sc
 
 # Screenshots
 
-<img width="615" height="345" alt="Screenshot (218)" src="https://github.com/user-attachments/assets/dce3f6b3-8167-48c0-91cf-ab5c7fbc5407" />
+<img width="606" height="342" alt="Screenshot (262)" src="https://github.com/user-attachments/assets/3dff7316-c287-4f85-a7bc-4eeafc442777" />
+
 
 # Playable Link
 https://ahmedalaa999.itch.io/cherry-tower
