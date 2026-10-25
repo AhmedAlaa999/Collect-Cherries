@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cdxtd3yuer80" path="res://HI/1.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://dkywygxmvuais" path="res://main_menu.gd" id="1_jix8l"]
 [ext_resource type="FontFile" path="res://HI/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata" id="2_7vrkn"]
-[ext_resource type="AudioStream" uid="uid://vqdrbndc1qvd" path="res://Between The Dunes.mp3" id="3_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://v774djsopt1j" path="res://nastelbom-halloween-halloween-music-617003.mp3" id="4_jix8l"]
 
 [node name="MainMenu" type="Control" unique_id=1529275845]
 layout_mode = 3
@@ -46,7 +46,7 @@ theme_override_fonts/font = ExtResource("2_7vrkn")
 text = "QUIT"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1221758769]
-stream = ExtResource("3_fu7sn")
+stream = ExtResource("4_jix8l")
 autoplay = true
 
 [node name="Label" type="Label" parent="." unique_id=464649399]

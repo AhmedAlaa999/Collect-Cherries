@@ -8,11 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://bout52xvl40ti" path="res://death_screen.tscn" id="1_v4mvp"]
 [ext_resource type="PackedScene" uid="uid://50i7vp78f5v4" path="res://cherry_guy.tscn" id="2_km2bi"]
 [ext_resource type="Script" uid="uid://dfshwg1amtsdk" path="res://camera_2d.gd" id="4_1ns3a"]
-[ext_resource type="AudioStream" uid="uid://vqdrbndc1qvd" path="res://Between The Dunes.mp3" id="4_ob7o4"]
 [ext_resource type="PackedScene" uid="uid://cjcwdw65xvk2k" path="res://coins.tscn" id="5_1ns3a"]
 [ext_resource type="Texture2D" uid="uid://buk1tjvum0rb3" path="res://HI/platform/platform.png" id="7_qu338"]
 [ext_resource type="PackedScene" uid="uid://uxm6h0nhjl8t" path="res://Blood.tscn" id="8_i4yi8"]
 [ext_resource type="FontFile" path="res://HI/Minecraft.ttf-b4cc597ac42d1410cc55dc192f0c0e34.fontdata" id="10_286o7"]
+[ext_resource type="AudioStream" uid="uid://v774djsopt1j" path="res://nastelbom-halloween-halloween-music-617003.mp3" id="10_i4yi8"]
 [ext_resource type="PackedScene" uid="uid://dn30ojdtaict6" path="res://Halo.tscn" id="13_dt6kx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_km2bi"]
@@ -96,7 +96,7 @@ tile_map_data = PackedByteArray("AAAlAOv/AAAAAAAAAAAlAOz/AAAAAAAAAAAlAO3/AAAAAAA
 tile_set = SubResource("TileSet_vax7b")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1170889157]
-stream = ExtResource("4_ob7o4")
+stream = ExtResource("10_i4yi8")
 autoplay = true
 
 [node name="Platform" type="TileMapLayer" parent="." unique_id=1243859181]
